@@ -9,25 +9,21 @@ import Home from './views/Home';
 import Login from './views/Login';
 import MainCategory from './views/MainCategory';
 
-const Routes = createStackNavigator({
-    Home: {
-        screen: Home,
+const Routes = createStackNavigator(
+    {
+        Home: {screen: Home},
+        Splash: {screen: Splash},
+        Login: {screen: Login},
+        MainCategory: {screen: MainCategory},
     },
-    Splash: {
-        screen: Splash,
-    },
-    Login: {
-        screen: Login,
-    },
-    MainCategory:{
-        screen:MainCategory
-    },
-}, {
-    headerMode: 'none',
-    navigationOptions: {
-        headerVisible: false,
-    },
-});
+    {
+        initialRouteName: 'Home',
+        headerMode: 'none',
+        navigationOptions: {
+            headerVisible: false,
+        },
+    }
+);
 const RoutesContainer = createAppContainer(Routes);
 
 class Router extends React.Component {

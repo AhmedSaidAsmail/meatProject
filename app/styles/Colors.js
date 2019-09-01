@@ -9,4 +9,5 @@ export default {
     orangeColor: '#f39c12',
     carrotColor: '#e67e22',
     redColor: '#ed0000',
+    silverColor:'#bdc3c7',
 };
