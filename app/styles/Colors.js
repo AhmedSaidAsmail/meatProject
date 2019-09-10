@@ -5,6 +5,7 @@ export default {
     mostBlackColor: '#000103',
     facebookColor: '#3b5998',
     twitterColor: '#1DA1F2',
+    belizeHoleColor:'#2980b9',
     successColor: '#5cb85c',
     orangeColor: '#f39c12',
     carrotColor: '#e67e22',

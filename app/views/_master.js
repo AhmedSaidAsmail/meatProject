@@ -2,6 +2,7 @@ import React from 'react';
 import {
     View,
     Text,
+    TouchableOpacity,
     ScrollView,
 } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
@@ -47,19 +48,20 @@ export default class MasterView extends React.Component {
     }
 
     render() {
+        const {navigate} = this.props.navigation;
         return (
             <View style={Master.container}>
                 <View style={Master.headerArea}>
                     <Text style={Master.headerTitle}>{this.state.title}</Text>
                 </View>
                 <View style={Master.body}>
-                        {this._bodyContent()}
+                    {this._bodyContent()}
                 </View>
                 <View style={Master.footer}>
-                    <View style={Master.footerPart}>
+                    <TouchableOpacity style={Master.footerPart} onPress={() => navigate('Home')}>
                         <Icon name='home' style={this._footerPartStyle(Master.footerPartIcon, 'home')}/>
                         <Text style={this._footerPartStyle(Master.footerPartText, 'home')}>الرئيسية</Text>
-                    </View>
+                    </TouchableOpacity>
                     <View style={Master.footerPart}>
                         <Icon name='shopping-cart' style={this._footerPartStyle(Master.footerPartIcon, 'cart')}/>
                         <Text style={this._footerPartStyle(Master.footerPartText, 'cart')}>مشترياتي</Text>

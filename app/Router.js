@@ -8,6 +8,8 @@ import Splash from './views/Splash';
 import Home from './views/Home';
 import Login from './views/Login';
 import MainCategory from './views/MainCategory';
+import MeatSort from './views/MeatSort';
+import MeatPart from './views/MeatPart';
 
 const Routes = createStackNavigator(
     {
@@ -15,9 +17,11 @@ const Routes = createStackNavigator(
         Splash: {screen: Splash},
         Login: {screen: Login},
         MainCategory: {screen: MainCategory},
+        MeatSort: {screen: MeatSort},
+        MeatParts: {screen: MeatPart},
     },
     {
-        initialRouteName: 'Home',
+        initialRouteName: 'MeatParts',
         headerMode: 'none',
         navigationOptions: {
             headerVisible: false,

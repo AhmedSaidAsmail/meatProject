@@ -123,4 +123,28 @@ export const Master = {
         textShadowOffset: {height: 1, width: -1},
         textShadowRadius: 10,
     },
+    publicContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    selectSort: {
+        alignSelf: 'stretch',
+        borderWidth: 1,
+        borderColor: Colors.belizeHoleColor,
+        backgroundColor: Colors.belizeHoleColor,
+        paddingVertical: 6,
+        marginHorizontal: 20,
+        marginBottom: 10,
+        alignItems: 'center',
+    },
+    selectSortText: {
+        fontFamily: Fonts.elMessiriBold,
+        fontSize: 25,
+        color: '#ffffff',
+    },
+    secondContainer: {
+        backgroundColor: '#e6e6e6',
+        flex: 1,
+    },
 };

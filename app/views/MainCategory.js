@@ -24,9 +24,7 @@ export default class MainCategory extends MasterView {
     }
 
     componentDidMount() {
-        //const {mainCategory} = this.props.navigation.state.params;
         this._importData();
-        // this.setState({title: 'اختار الحجم', mainCategoryId: 2});
     }
 
     _importData = () => {
@@ -41,9 +39,14 @@ export default class MainCategory extends MasterView {
 
     _renderImportData() {
         const response = this.state.response;
+        const {navigate} = this.props.navigation;
+        const cardinals = {mainCategoryId: this.state.id, parts: false};
         return (
             <View>
-                <TouchableOpacity style={Master.mainCategoryCart}>
+                <TouchableOpacity
+                    style={Master.mainCategoryCart}
+                    onPress={() => navigate('MeatSort', {cardinals: cardinals})}
+                >
                     <Image
                         style={Master.mainCategoryImage}
                         source={{uri: website + 'images/animals/' + response.image}}
@@ -52,7 +55,10 @@ export default class MainCategory extends MasterView {
                         <Text style={Master.mainCategoryText}>كامل</Text>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity style={Master.mainCategoryCart}>
+                <TouchableOpacity
+                    style={Master.mainCategoryCart}
+                    onPress={() => navigate('MeatSort', {cardinals: {...cardinals, parts: true}})}
+                >
                     <Image
                         style={Master.mainCategoryImage}
                         source={{uri: website + 'images/animals/' + response.parts_image}}
